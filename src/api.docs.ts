@@ -241,3 +241,35 @@
  *               success: false
  *               message: "Invalid user ID"
  */
+
+/**
+ * @swagger
+ * /api/v1/users:
+ *   get:
+ *     tags:
+ *      - Users
+ *     summary: Get All Users.
+ *     responses:
+ *       200:
+ *         description: Get all users.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 message:
+ *                   type: string
+ *                 data:
+ *                   type: array
+ *               example:
+ *                 success: true
+ *                 message: "Users retrieved successfully"
+ *                 data: [
+ *                   {
+ *                     id: "1",
+ *                     email: "datata@datata.com"
+ *                   }
+ *                 ]
+ */

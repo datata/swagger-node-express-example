@@ -96,6 +96,26 @@ app.delete("/api/v1/users/:id", (req, res) => {
   }
 });
 
+app.get("/api/v1/users", (req, res) => {
+  try {
+    res.status(200).json({
+      success: true,
+      message: "List of users",
+      data: [
+        {
+          id: 1,
+          email: "datata@datata.com"
+        }
+      ]
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
+  }
+});
+
 // Swagger
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
