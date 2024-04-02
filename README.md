@@ -151,15 +151,17 @@ http://localhost:4000/api-docs/.
 **4. Ejemplo documentación**
 
 ```ts
-//SECURITY
 /**
  * @swagger
  * components:
  *  securitySchemes:
  *    BearerAuth:
+ *      type: http
  *      scheme: bearer
  *      bearerFormat: JWT
-*/
+ * security:
+ *  - BearerAuth: []
+ */
 
 // HEALTHY
 /**
